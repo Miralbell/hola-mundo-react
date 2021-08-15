@@ -1,24 +1,100 @@
 import React, { Component }  from 'react';
 
-
-// // _________________PRIMER COMPONENETE CON STATE_______________________
+// // _________________INICIDALIZANDO EL ESTADO MEDIANTE PROPS_______________________
 
 class Contador extends Component{
- state = {contador : 1};
+  constructor (props) {
+    super (props)
+    console.log(this.props.contadorInicial)
+    this.state = {contador : this.props.contadorInicial};
+    setInterval(() => {
+      this.setState({contador : this.state.contador + 1})
+}, 1000)
+  }
   render () {
-    return <span>{this.state.contador}</span>;
+    return <ContadorNumero numero = {this.state.contador}/>
   }
 } 
+
+Contador.defaultProps = {
+  contadorInicial:10
+}
+
+class ContadorNumero extends Component {
+  render () {
+    console.log ('ContadorNumero render()')
+    return <span>{this.props.numero}</span>    
+  }
+}
 
 class App extends Component {
   render () {
     return ( <div className = 'App'>
       <p>Primer componenete con state</p>
-      <Contador />
+      <Contador contadorInicial = {300}/>
     </div>
     );
   }
 }
+
+
+// // _________________PROPAGACIÓN DE DATOS_______________________
+
+// class Contador extends Component{
+//   constructor () {
+//     super ()
+//     this.state = {contador : 1};
+//     setInterval(() => {
+//       this.setState({contador : this.state.contador + 1})
+// }, 1000)
+//   }
+//   render () {
+//     return <ContadorNumero numero = {this.state.contador}/>
+//   }
+// } 
+
+// class ContadorNumero extends Component {
+//   render () {
+//     console.log ('ContadorNumero render()')
+//     return <span>{this.props.numero}</span>    
+//   }
+// }
+
+// class App extends Component {
+//   render () {
+//     return ( <div className = 'App'>
+//       <p>Primer componenete con state</p>
+//       <Contador />
+//     </div>
+//     );
+//   }
+// }
+
+
+// // // _________________PRIMER COMPONENETE CON STATE + SET STATE_______________________
+
+// class Contador extends Component{
+//   constructor () {
+//     super ()
+//     this.state = {contador : 1};
+//     setInterval(() => {
+//       this.setState({contador : this.state.contador + 1})
+// }, 1000)
+//   }
+//   render () {
+//     return <span>{this.state.contador}</span>;
+//   }
+// } 
+
+// class App extends Component {
+//   render () {
+//     return ( <div className = 'App'>
+//       <p>Primer componenete con state</p>
+//       <Contador />
+//     </div>
+//     );
+//   }
+// }
 
 
 

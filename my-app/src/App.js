@@ -11,7 +11,10 @@ import './App.css';
 
 class Hello extends Component {
   render () {
-    return <h2>{this.props.title}</h2>
+    return <div>
+      <h2>{this.props.title}</h2>
+      <h1>{this.props.number}</h1>
+    </div>
   }
 };
 
@@ -38,12 +41,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Hello title = 'Hello From Props'/>
+        <Hello 
+        title = 'Esta es mi primera aplicación de react'
+        number = '3'/>
         <Text
         arrayOfNumbers = {[2,3,10]} 
-        objectWithInfo = {{Key1:'Value', Key2:'other'}}
+        objectWithInfo = {{Key1:'Valor', Key2:'Otro Valor'}}
         isActivated 
-        muliply = {(number) => number * 4}
+        muliply = {(number) => number * 3}
         number={2} 
         Text = 'Texto en String'
         Title = {<h1>Este es el Titulo</h1>}

@@ -41,7 +41,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Hello 
+      </header>
+      <Hello 
         title = 'Esta es mi primera aplicación de react'
         number = '3'/>
         <Text
@@ -53,8 +54,6 @@ function App() {
         Text = 'Texto en String'
         Title = {<h1>Este es el Titulo</h1>}
         />
-        
-      </header>
     </div>
   );
 }

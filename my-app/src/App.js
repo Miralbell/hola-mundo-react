@@ -1,30 +1,75 @@
 import React, { Component }  from 'react';
-import cars from './data/cars.json'
+import Forms from './sections/forms.js'
+// import cars from './data/cars.json'
 
-// // _________________TRABAJANDO CON LISTADOS de objetos_______________________
+// // _________________FORMULARIOS EN REACT_______________________
 
 class App extends Component {
   render () {
     return ( <div className = 'App'>
-      <h4>Trabajando con listas con objetos</h4>
-      <ul>
-        {cars.map(
-          car => {
-            return (
-              <li key = {car.id}>
-                 <p><strong>Nombre</strong>: {car.name}</p>
-                 <p>Marca : {car.company}</p>
-              
-              </li>
-              
-            )
-          }
-        )}
-      </ul>
+      <Forms />
     </div>
     );
   }
 }
+
+// // // _________________Eventos on click_______________________
+
+// class App extends Component {
+//   constructor () {
+//     super ()
+//     this.state = {mouseX : 0, mouseY: 0}
+//     // this.handleMouseMove = this.handleMouseMove.bind(this)
+//   }
+
+//   handleMouseMove = (e) => {
+//     const {clientX, clientY} = e
+//     this.setState({mouseX: clientX, mouseY: clientY})
+//   }
+
+
+//   handleClick (e) {
+//     alert('Hi There!!')
+//   }
+//   render () {
+//     return ( <div className = 'App'>
+//       <h4>Eventos</h4>
+//       <button onClick = {this.handleClick}>Hi There !</button>
+//       <div 
+//       onMouseMove={this.handleMouseMove}
+//       style = {{border:'1px solid #000', marginTop: 10, padding:10}}>
+//         <p>{this.state.mouseX}, {this.state.mouseY}</p>
+//       </div>
+
+//     </div>
+//     );
+//   }
+// }
+
+// // _________________TRABAJANDO CON LISTADOS de objetos_______________________
+
+// class App extends Component {
+//   render () {
+//     return ( <div className = 'App'>
+//       <h4>Trabajando con listas con objetos</h4>
+//       <ul>
+//         {cars.map(
+//           car => {
+//             return (
+//               <li key = {car.id}>
+//                  <p><strong>Nombre</strong>: {car.name}</p>
+//                  <p>Marca : {car.company}</p>
+              
+//               </li>
+              
+//             )
+//           }
+//         )}
+//       </ul>
+//     </div>
+//     );
+//   }
+// }
 
 
 

@@ -1,16 +1,60 @@
 import React, { Component }  from 'react';
-import ConditionalSection from './sections/conditional';
+import cars from './data/cars.json'
 
-// _________________RENDER CONDICIONAL REACT_______________________
+// // _________________TRABAJANDO CON LISTADOS de objetos_______________________
 
 class App extends Component {
   render () {
     return ( <div className = 'App'>
-      <ConditionalSection />
+      <h4>Trabajando con listas con objetos</h4>
+      <ul>
+        {cars.map(
+          car => {
+            return (
+              <li key = {car.id}>
+                 <p><strong>Nombre</strong>: {car.name}</p>
+                 <p>Marca : {car.company}</p>
+              
+              </li>
+              
+            )
+          }
+        )}
+      </ul>
     </div>
     );
   }
 }
+
+
+
+// // _________________TRABAJANDO CON LISTADOS_______________________
+
+// class App extends Component {
+//   render () {
+//     const number = [1,1,2,3,4,5]
+//     return ( <div className = 'App'>
+//       <h4>Trabajando con listas</h4>
+//       {number.map(number => {
+//         return <p key = {number}>Soy el Número {number}</p>
+//       })}
+//     </div>
+//     );
+//   }
+// }
+
+
+
+// _________________RENDER CONDICIONAL REACT_______________________
+
+// class App extends Component {
+//   render () {
+//     return ( <div className = 'App'>
+//       <ConditionalSection />
+//     </div>
+//     );
+//   }
+// }
 
 // // // _________________INICIDALIZANDO EL ESTADO MEDIANTE PROPS_______________________
 

@@ -1,17 +1,92 @@
 import React, { Component }  from 'react';
-import Forms from './sections/forms.js'
-// import cars from './data/cars.json'
+import ComponentDidMount from './sections/components/componentDidMount.js'
 
-// // _________________FORMULARIOS EN REACT_______________________
+// // // // COMPONENET DIDMOUNT_______________________
 
 class App extends Component {
   render () {
-    return ( <div className = 'App'>
-      <Forms />
+    return (<div>
+      <ComponentDidMount />
     </div>
     );
   }
 }
+
+// // // // CHILDREN Y PROPTYPES EN REACT_______________________
+
+// import PropTypes from 'prop-types';
+
+// class Box extends Component {
+//   render () {
+//     return (<div style= {{border:'1px solid #09f', margin: 5, padding: 5}}>
+//     {this.props.children}
+//     </div>)
+//   }
+// }
+
+// class Article extends Component {
+//   static propTypes = {
+//     author: PropTypes.string.isRequired
+//   }
+//   render () {
+//     const {author,children,date, title} = this.props
+//     return (
+//       <section>
+//         <h2>{title}</h2>
+//         {author && <p><em>Escrito por {author}</em></p>}
+//         <Box>{date}</Box>
+//         <article>
+//           {children}
+//         </article>
+//       </section>
+//     )
+//   }
+// }
+
+
+// class App extends Component {
+//   render () {
+//     return ( <div className = 'App'>
+//       <h4> Children Y PropTypes</h4>
+//       <Article 
+//       date={new Date().toLocaleDateString()}
+//       title='Articulo sobre la prop Children'
+//       >
+//         <p>El contenido que envolvemos dentro del compononente articulo será enviado al componenete como this.props.children</p>
+//         <strong>Y mantiene las etiquetas que hayais añadido dentro</strong>
+//       </Article>
+//     </div>
+//     );
+//   }
+// }
+
+
+// // // _________________FORMULARIOS EN REACT_______________________
+
+// import Forms from './sections/forms.js'
+
+// class App extends Component {
+//   render () {
+//     return ( <div className = 'App'>
+//       <Forms />
+//     </div>
+//     );
+//   }
+// }
+
+
+// // // _________________FORMULARIOS EN REACT_______________________
+
+// import Forms from './sections/forms.js'
+
+// class App extends Component {
+//   render () {
+//     return ( <div className = 'App'>
+//       <Forms />
+//     </div>
+//     );
+//   }
+// }
 
 // // // _________________Eventos on click_______________________
 
@@ -47,6 +122,8 @@ class App extends Component {
 // }
 
 // // _________________TRABAJANDO CON LISTADOS de objetos_______________________
+
+// import cars from './data/cars.json'
 
 // class App extends Component {
 //   render () {

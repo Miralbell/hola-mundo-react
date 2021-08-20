@@ -1,16 +1,27 @@
 import React, { Component }  from 'react';
-import ComponentDidMount from './sections/components/componentDidMount.js'
+import FetchExample from './sections/components/FetchExample.js'
 
-// // // // COMPONENET DIDMOUNT_______________________
+
+// // // // COMPONENET FETCH_______________________
 
 class App extends Component {
   render () {
     return (<div>
-      <ComponentDidMount />
+      <FetchExample />
     </div>
     );
   }
 }
+// // // // // COMPONENET DIDMOUNT_______________________
+
+// class App extends Component {
+//   render () {
+//     return (<div>
+//       <ComponentDidMount />
+//     </div>
+//     );
+//   }
+// }
 
 // // // // CHILDREN Y PROPTYPES EN REACT_______________________
 

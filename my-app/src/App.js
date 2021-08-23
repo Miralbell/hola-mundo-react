@@ -1,17 +1,32 @@
 import React, { Component }  from 'react';
-import FetchExample from './sections/components/FetchExample.js'
+import EjemploCicloDeActualización from './sections/components/willreciveprops.js'
 
 
-// // // // COMPONENET FETCH_______________________
+
+
+// // // // CICLO DE ACTUALIZACIÓN_______________________
 
 class App extends Component {
   render () {
     return (<div>
-      <FetchExample />
+      <EjemploCicloDeActualización/>
     </div>
     );
   }
 }
+
+// // // // COMPONENET FETCH_______________________
+
+// import FetchExample from './sections/components/FetchExample.js'
+
+// class App extends Component {
+//   render () {
+//     return (<div>
+//       <FetchExample />
+//     </div>
+//     );
+//   }
+// }
 // // // // // COMPONENET DIDMOUNT_______________________
 
 // class App extends Component {

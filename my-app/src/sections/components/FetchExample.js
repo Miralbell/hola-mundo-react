@@ -1,4 +1,4 @@
-import { object } from 'prop-types';
+// eslint-disable-next-line
 import React, { Component }  from 'react';
 
 export default class FetchExample extends Component {
@@ -13,7 +13,7 @@ export default class FetchExample extends Component {
     }
     _renderCurrencies () {
         const { bpi } = this.state
-        const currencies = Object.keys(bpi)
+        // const currencies = Object.keys(bpi)
         return currencies.map(currency => {
             return (
             <div key={currency}>
